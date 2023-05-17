@@ -14,12 +14,12 @@ def generate_roles(num_players):
     random.shuffle(roles)
     
     return roles
-
+#Допилить функцию до ума 
 def assign_roles(num_players):
     roles = generate_roles(num_players)
     if roles is None:
         return
-    
+   #Разобрать индийский код по функция 
     players = [f"Игрок {i}" for i in range(1, num_players + 1)]
     player_roles = dict(zip(players, roles))
     
@@ -120,6 +120,6 @@ def get_leader_and_hammer(players):
     hammer = players[hammer_index]
     return leader, hammer
 
-# Пример использования
+# Запилить нормальный запускатор.
 num_players = int(input("Введите количество игроков (от 5 до 10): "))
 assign_roles(num_players)
